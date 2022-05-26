@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layoutDirection="ltr">
+
+
+    <LinearLayout
+        android:id="@+id/contentDays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/tvDividerFirst"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/tvCountDownDays"
+            style="@style/CountDownViewTextViewStyle"
+            tools:text="27" />
+
+        <TextView
+            android:id="@+id/tvDaysText"
+            style="@style/CountDownViewDescriptionTextViewStyle"
+            android:text="@string/days"
+            app:layout_constraintEnd_toEndOf="@+id/tvCountDownDays"
+            app:layout_constraintStart_toStartOf="@+id/tvCountDownDays"
+            app:layout_constraintTop_toBottomOf="@+id/tvCountDownDays" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvDividerFirst"
+        style="@style/CountDownViewColonTextViewStyle"
+        app:layout_constraintBottom_toBottomOf="@+id/contentHours"
+        app:layout_constraintEnd_toStartOf="@+id/contentHours"
+        app:layout_constraintTop_toTopOf="@+id/contentHours" />
+
+    <LinearLayout
+        android:id="@+id/contentHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/tvDividerSecond"
+        app:layout_constraintTop_toTopOf="parent">
+    <TextView
+        android:id="@+id/tvCountDownHours"
+        style="@style/CountDownViewTextViewStyle"
+        tools:text="09" />
+
+        <TextView
+            android:id="@+id/tvHoursText"
+            style="@style/CountDownViewDescriptionTextViewStyle"
+            android:text="@string/hours" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDividerSecond"
+        style="@style/CountDownViewColonTextViewStyle"
+        app:layout_constraintBottom_toBottomOf="@+id/contentMinutes"
+        app:layout_constraintEnd_toStartOf="@+id/contentMinutes"
+        app:layout_constraintTop_toTopOf="@+id/contentMinutes" />
+
+
+    <LinearLayout
+        android:id="@+id/contentMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/tvDividerSecond"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/tvCountDownMinutes"
+            style="@style/CountDownViewTextViewStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="42" />
+
+
+        <TextView
+            android:id="@+id/tvMinutesText"
+            style="@style/CountDownViewDescriptionTextViewStyle"
+            android:text="@string/minutes"
+            app:layout_constraintEnd_toEndOf="@+id/tvCountDownMinutes"
+            app:layout_constraintStart_toStartOf="@+id/tvCountDownMinutes"
+            app:layout_constraintTop_toBottomOf="@+id/tvCountDownMinutes" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

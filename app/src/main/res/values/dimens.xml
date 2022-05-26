@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="timeline_header_horizontal_margin">17.5dp</dimen>
+    <dimen name="timeline_horizontal_margin">15dp</dimen>
+
+
+    <dimen name="timeline_header_image_collapse_width_size">92dp</dimen>
+    <dimen name="timeline_header_image_collapse_height_size">72dp</dimen>
+</resources>

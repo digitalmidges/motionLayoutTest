@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CountDownViewTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24.3sp</item>
+        <item name="android:textColor">@color/dark_blue_mint</item>
+        <item name="android:fontFamily">@font/rubik_light</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="CountDownViewColonTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24.3sp</item>
+        <item name="android:textColor">@color/dark_blue_mint</item>
+        <item name="android:fontFamily">@font/rubik_light</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:text">@string/colon</item>
+        <item name="android:paddingEnd">7dp</item>
+        <item name="android:paddingStart">7dp</item>
+    </style>
+
+    <style name="CountDownViewDescriptionTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">@color/dark_blue_mint</item>
+        <item name="android:alpha">0.52</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_marginTop">1dp</item>
+    </style>
+
+
+</resources>

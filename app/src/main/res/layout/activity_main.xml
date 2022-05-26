@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background_color"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:background="@color/main_background_color">
+<!--    android:clipChildren="false"-->
+<!--    android:clipToPadding="false"-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerImageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="167dp"
+        android:layoutDirection="ltr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imgDestinationImage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_miami"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imgShape"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_timeline_image_shape"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imgHeaderLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_timeline_elal_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <net.orandja.shadowlayout.ShadowLayout
+        android:id="@+id/shadowLayoutWeatherContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/timeline_header_horizontal_margin"
+        android:paddingStart="20dp"
+        android:paddingBottom="20dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="@+id/headerImageLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerImageLayout"
+        app:shadow_color="@color/flight_search_shadow"
+        app:shadow_radius="10">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/weatherContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+
+            <ImageView
+                android:id="@+id/shapeTrapeze"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shape_white_trapeze"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/imgWeatherIcon"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_timeline_weather_sun"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/tvWeatherTemperature"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/shapeTrapeze"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tvWeatherTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:lineSpacingExtra="0sp"
+                android:text="32°"
+                android:textColor="@color/midnight_blue_two"
+                android:textSize="31sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvWeatherDate"
+                app:layout_constraintEnd_toEndOf="@+id/imgWeatherIcon"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/imgWeatherIcon"
+                app:layout_constraintTop_toBottomOf="@+id/imgWeatherIcon" />
+
+            <TextView
+                android:id="@+id/tvWeatherDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="6sp"
+                android:text="20 Feb"
+                android:textColor="@color/new_grey_color"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvWeatherDateDayOfWeek"
+                app:layout_constraintEnd_toEndOf="@+id/imgWeatherIcon"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/imgWeatherIcon"
+                app:layout_constraintTop_toBottomOf="@+id/tvWeatherTemperature" />
+
+            <TextView
+                android:id="@+id/tvWeatherDateDayOfWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.52"
+                android:fontFamily="@font/rubik_medium"
+                android:gravity="center_horizontal"
+                android:text="Sun"
+                android:textColor="@color/dark_blue_mint"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imgWeatherIcon"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/imgWeatherIcon"
+                app:layout_constraintTop_toBottomOf="@+id/tvWeatherDate" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </net.orandja.shadowlayout.ShadowLayout>
+    <LinearLayout
+        android:id="@+id/recyclerViewWeatherWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/countDownView">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/weatherRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/timeline_header_horizontal_margin"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="10"
+            tools:listitem="@layout/row_timeline_weather" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDestinationName"
+        android:layout_width="0dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="@dimen/timeline_header_horizontal_margin"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/rubik_regular"
+        android:maxLines="1"
+        android:text="Tel-Aviv"
+        android:textColor="@color/midnight_blue_two"
+        app:autoSizeMaxTextSize="25sp"
+        app:autoSizeMinTextSize="11sp"
+        app:autoSizeStepGranularity="1sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toStartOf="@+id/shadowLayoutWeatherContent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerImageLayout" />
+
+    <TextView
+        android:id="@+id/tvFlightDateCollapse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_regular"
+        android:textSize="13sp"
+        android:text="15 Aug 22"
+        android:alpha="0"
+        app:layout_constraintStart_toStartOf="@+id/tvDestinationName"
+        app:layout_constraintEnd_toEndOf="@+id/tvDestinationName"
+        app:layout_constraintTop_toBottomOf="@+id/tvDestinationName"
+        />
+
+
+    <com.digitalmidges.timelinetest.CountDownView
+        android:id="@+id/countDownView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintStart_toStartOf="@+id/tvDestinationName"
+        app:layout_constraintTop_toBottomOf="@+id/tvDestinationName" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTimeLine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/collapseAnchor"
+        tools:itemCount="10"
+        tools:listitem="@layout/row_timeline_for_you" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/collapseAnchor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewWeatherWrapper"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:src="@drawable/timeline_shadow_gradient"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
